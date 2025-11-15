@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/**/*.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/geo/?", "dest": "/api/geo.js" },
+    { "src": "/geo/(.*)", "dest": "/api/geo/[ip].js" }
+  ]
+}
